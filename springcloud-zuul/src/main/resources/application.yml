@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: zuul
+    
+server:
+  port: 3001
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:2001/eureka
+
+zuul:
+  routes:
+    springcloud-provider: /springcloud-provider/**
+    springcloud-consumer: /springcloud-consumer/**
